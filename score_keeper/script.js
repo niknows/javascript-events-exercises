@@ -40,4 +40,5 @@ function reset(){
     playerOneScore.innerText = 0;
     playerTwoScore.innerText = 0;
     playingTo.value = 0;
+    playingToText.innerText = 0;
 }
