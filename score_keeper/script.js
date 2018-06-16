@@ -17,14 +17,10 @@ playingToText.innerText = this.value;
 })
 
 /*Player one button adds to score*/
-p1Button.addEventListener('click',function(){
-playerOneScore.innerText = Number(playerOneScore.innerText) + 1;
-});
+buttonToText(p1Button,playerOneScore);
 
 /*Player two button adds to score*/
-p2Button.addEventListener('click',function(){
-playerTwoScore.innerText = Number(playerTwoScore.innerText) + 1;
-});
+buttonToText(p2Button,playerTwoScore);
 
 /*Reset button event*/
 resetButton.addEventListener('click',function(){
@@ -35,6 +31,11 @@ reset();
 
 
 /*--FUNCTIONS--*/
+function buttonToText(playerButton, playerScore){
+    playerButton.addEventListener('click',function(){
+    playerScore.innerText = Number(playerScore.innerText) + 1;
+    });       
+    }
 
 function reset(){
     playerOneScore.innerText = 0;
